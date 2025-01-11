@@ -4,7 +4,7 @@ import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 
 function Header(){
     return(
-        <header className='flex justify-between px-5 py-3 text-3xl items-center shadow-lg sticky w-full'>
+        <header className='flex justify-between px-5 py-3 text-3xl items-center shadow-lg sticky top-0 w-full'>
         <div className='flex gap-20'>
           <div className='flex gap-3 items-center'>
           <FontAwesomeIcon icon={faBookOpen} className='text-blue-600 text-3xl' />

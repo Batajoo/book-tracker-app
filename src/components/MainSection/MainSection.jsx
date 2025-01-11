@@ -5,7 +5,7 @@ import {AddBookSection, BookCard} from "../index";
 
 function MainSection(){
     return(
-    <section>
+    <section className="max-w-4xl mx-auto block">
         <AddBookSection/>
         <div className="flex m-8 p-4 gap-3 rounded-md items-center border shadow-lg">
             <FontAwesomeIcon icon={faExclamation}/>
