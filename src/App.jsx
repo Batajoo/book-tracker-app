@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Footer, Header } from './components/index'
+import { Footer, Header, MainSection } from './components/index'
 
 function App() {
 
   return (
     <>
       <Header/>
+      <MainSection/>
       <Footer/>
     </>
   )
