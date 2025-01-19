@@ -1,12 +1,16 @@
 import {createContext, useContext } from "react";
 
 export const AddButtonContext = createContext({
-    status: false,
-    changeStatus: ()=>{}
+    addPageOpen: false,
+    bookData:[],
+    addBook: (title, author, genre, status, rating, notes)=>{},
+    togglePopUp: ()=>{}
 })
 
-export const useAddButtonContext = useContext(AddButtonContext);
+export const useAddButtonContext = () => {
+    return useContext(AddButtonContext);
+}
 
-const AddButtonContextProvider = AddButtonContext.Provider;
+export const AddButtonContextProvider = AddButtonContext.Provider;
 
 export default AddButtonContextProvider;

@@ -33,13 +33,13 @@ function BookCard({
                             <span>Completed</span>
                         </div>
                         ) 
-                        :status === "reading" ? 
+                        :status === "Currently Reading" ? 
                             (<div>
                                 <FontAwesomeIcon icon={faBookOpenReader} className="text-blue-500 mr-2"/>
                                 <span>Reading</span>
                             </div>
                             )
-                        :status === "toRead" ?
+                        :status === "To Read" ?
                             (<div>
                                 <FontAwesomeIcon icon={faCloud} className="text-gray-500 mr-2"/>
                                 <span>To Read</span>
