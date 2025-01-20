@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { AddButtonPage, Footer, Header, MainSection } from './components/index'
-import { AddButtonContextProvider } from './context';
+import { AddButtonContextProvider, FilterContextProvider } from './context';
 
 
 function App() {
   const [addPageOpen, setAddPageOpen] = useState(false);
+  const [filterStatus, setFilterStatus] = useState(false);
+  const [filterValue, setFilterValue] = useState("All Status");
+
   const [bookData, setBookData] = useState([
     {
         bookName: "The Silent Ocean",
@@ -43,12 +46,15 @@ function App() {
 	}])
   }
 
+
   return (
     <>
 		<Header/>
 		<AddButtonContextProvider value={{addPageOpen, togglePopUp, bookData, addBook}}>
-			<AddButtonPage />
-			<MainSection/>
+      <FilterContextProvider value={{filterStatus, setFilterStatus, filterValue, setFilterValue}}>
+        <AddButtonPage />
+        <MainSection/>
+      </FilterContextProvider>
 		</AddButtonContextProvider>
 		<Footer/>
     </>
