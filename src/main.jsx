@@ -11,8 +11,8 @@ createRoot(document.getElementById('root')).render(
     <Routes>
       <Route path='/' element={<Layout/>}>
         <Route index element={<App/>}/>
-        <Route path='settings' element={Settings}/>
-        <Route path='summary' element={Summary}/>
+        <Route path='settings' element={<Settings/>}/>
+        <Route path='summary' element={<Summary/>}/>
       </Route>
     </Routes>
   </BrowserRouter>

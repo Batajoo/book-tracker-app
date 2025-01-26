@@ -12,10 +12,13 @@ function Header(){
           <h1 className='font-bold'>BookTracker</h1>
           </div>
 
-          <nav className='flex gap-10 items-center'>
-            <NavLink to="/" className={({isActive})=> isActive ? "active:bg-blue-300 bg-blue-200 px-3 py-1.5 rounded-md": ""}>
+          <nav className='flex gap-5 items-center'>
+            <NavLink to="/" className={({isActive})=> 
+              isActive ? 
+              "active:bg-blue-300 bg-blue-200 px-3 py-1.5 rounded-md text-blue-500": 
+              "text-gray-500 hover:text-blue-500 px-3 py-1.5"}>
               <svg 
-                className="text-blue-500 hover:text-blue-500 lucide lucide-book-open w-5 h-5" 
+                className="lucide lucide-book-open w-5 h-5" 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="24" 
                 height="24" 
@@ -30,9 +33,12 @@ function Header(){
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
               </svg>
             </NavLink>
-            <NavLink to="/summary" className={({isActive})=> isActive ? "active:bg-blue-300 bg-blue-200 px-3 py-1.5 rounded-md text-blue-500": ""}>
+            <NavLink to="/summary" className={({isActive})=> 
+              isActive ? 
+              "active:bg-blue-300 bg-blue-200 px-3 py-1.5 rounded-md text-blue-500": 
+              "text-gray-500 hover:text-blue-500 px-3 py-1.5"}>
               <svg 
-                className="text-gray-500 hover:text-blue-500 lucide lucide-trending-up w-5 h-5" 
+                className="lucide lucide-trending-up w-5 h-5" 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="24" 
                 height="24" 
@@ -47,9 +53,12 @@ function Header(){
                 <polyline points="16 7 22 7 22 13"></polyline>
               </svg>
             </NavLink>
-            <NavLink to="/settings" className={({isActive})=> isActive ? "active:bg-blue-300 bg-blue-200 px-3 py-1.5 rounded-md text-blue-500": ""}>
+            <NavLink to="/settings" className={({isActive})=> 
+              isActive ? 
+              "active:bg-blue-300 bg-blue-200 px-3 py-1.5 rounded-md text-blue-500": 
+              "text-gray-500 hover:text-blue-500 px-3 py-1.5"}>
               <svg 
-                className="text-gray-500 hover:text-blue-500 lucide lucide-settings w-5 h-5" 
+                className="lucide lucide-settings w-5 h-5" 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="24" 
                 height="24" 
