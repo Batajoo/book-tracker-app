@@ -49,14 +49,12 @@ function App() {
 
   return (
     <>
-		<Header/>
 		<AddButtonContextProvider value={{addPageOpen, togglePopUp, bookData, addBook}}>
       <FilterContextProvider value={{filterStatus, setFilterStatus, filterValue, setFilterValue}}>
         <AddButtonPage />
         <MainSection/>
       </FilterContextProvider>
 		</AddButtonContextProvider>
-		<Footer/>
     </>
   )
 }

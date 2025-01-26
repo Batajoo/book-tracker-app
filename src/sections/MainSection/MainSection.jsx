@@ -1,7 +1,7 @@
 import React from "react";
 import { faExclamation, faBookOpenReader } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {AddBookSection, BookCard} from "../index";
+import {AddBookSection, BookCard} from "../../components/index";
 import { useAddButtonContext, useFilterContext } from "../../context";
 
 function MainSection(){
