@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { useDarkModeContext } from '../../context';
 
 function Settings() {
-  const [darkMode, setDarkMode] = useState(false);
+  const {darkMode, setDarkMode} = useDarkModeContext();
 
   const changeDarkMode = () => {
     setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark");
   }
 
   return (
@@ -16,8 +16,8 @@ function Settings() {
         <div className='flex justify-between'>
           <span>Dark Mode</span>
           <label htmlFor="toggle" className="flex items-center cursor-pointer">
-          <input type="checkbox" id="toggle" className="sr-only peer" onChange={changeDarkMode}/>
-          <div className="w-14 h-7 bg-gray-300 rounded-full peer-checked:bg-blue-500 relative transition-all duration-300">
+          <input type="checkbox" id="toggle" className="sr-only peer" onChange={changeDarkMode} value={darkMode}/>
+          <div className={`w-14 h-7  rounded-full ${darkMode?"bg-blue-500":"bg-gray-300"} relative transition-all duration-300`}>
             <div className={`absolute top-1 left-1 bg-white w-5 h-5 rounded-full shadow-md transition-all duration-300 ${darkMode ? "translate-x-7": "translate-x-0"}`}></div>
           </div>
         </label>

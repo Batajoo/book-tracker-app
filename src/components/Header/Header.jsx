@@ -1,9 +1,17 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router';
+import { useDarkModeContext } from '../../context';
 
 function Header(){
+    const {darkMode, setDarkMode} = useDarkModeContext();
+
+    const darkModeButtonClicked = () => {
+      setDarkMode(!darkMode);
+    }
+
     return(
         <header className='flex justify-between px-5 py-3 text-3xl items-center shadow-lg sticky top-0 w-full dark:bg-black dark:shadow-white dark:shadow-md'>
         <div className='flex gap-20'>
@@ -76,7 +84,13 @@ function Header(){
           </nav>
 
         </div>
-        <button><svg className=" text-gray-500 hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></button>
+        <button>
+          {darkMode ? 
+          <FontAwesomeIcon icon={faSun} className='text-white' onClick={darkModeButtonClicked}/> :
+          <svg onClick={darkModeButtonClicked} className=" text-gray-500 hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+          }
+          
+          </button>
       </header>
     );
 }
