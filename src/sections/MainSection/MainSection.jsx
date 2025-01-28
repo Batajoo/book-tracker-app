@@ -10,7 +10,7 @@ function MainSection(){
     return(
     <section className="max-w-4xl mx-auto block">
         <AddBookSection/>
-        <div className={`${filterStatus ? "block" : "hidden"} shadow-lg border p-4 mx-8 my-2 rounded-lg`}>
+        <div className={`${filterStatus ? "block" : "hidden"} shadow-lg border p-4 mx-8 my-2 rounded-lg bg-white`}>
             <select 
                 className="p-2 rounded-md" 
                 value={filterValue}
@@ -22,7 +22,7 @@ function MainSection(){
                 <option>To Read</option>
             </select>
         </div>
-        <div className="flex mx-8 mb-5 p-4 gap-3 rounded-md items-center border shadow-lg">
+        <div className="flex mx-8 mb-5 p-4 gap-3 rounded-md items-center border shadow-lg bg-white">
             <FontAwesomeIcon icon={faExclamation}/>
             <span>Track your reading progress and manage your book collection.</span>
         </div>

@@ -13,7 +13,7 @@ function BookCard({
 }){
     return (
         <>
-            <div className="mx-8 border p-6 rounded-lg shadow-md mb-5">
+            <div className="mx-8 border p-6 rounded-lg shadow-md mb-5 bg-white">
                 <div className='flex justify-between'>
                     <h3 className="font-bold text-xl mb-5">{bookName}</h3>
                     <div>

@@ -5,11 +5,11 @@ import { NavLink } from 'react-router';
 
 function Header(){
     return(
-        <header className='flex justify-between px-5 py-3 text-3xl items-center shadow-lg sticky top-0 w-full'>
+        <header className='flex justify-between px-5 py-3 text-3xl items-center shadow-lg sticky top-0 w-full dark:bg-black dark:shadow-white dark:shadow-md'>
         <div className='flex gap-20'>
           <div className='flex gap-3 items-center'>
           <FontAwesomeIcon icon={faBookOpen} className='text-blue-600 text-3xl' />
-          <h1 className='font-bold'>BookTracker</h1>
+          <h1 className='font-bold dark:text-white'>BookTracker</h1>
           </div>
 
           <nav className='flex gap-5 items-center'>

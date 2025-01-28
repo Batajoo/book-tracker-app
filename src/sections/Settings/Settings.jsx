@@ -5,12 +5,13 @@ function Settings() {
 
   const changeDarkMode = () => {
     setDarkMode(!darkMode);
+    document.documentElement.classList.toggle("dark");
   }
 
   return (
     <section className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Settings</h1>
-      <div className='px-8 py-4 flex flex-col gap-3 border rounded-lg shadow-md'>
+      <h1 className="text-2xl font-bold mb-4 dark:text-white">Settings</h1>
+      <div className='px-8 py-4 flex flex-col gap-3 border rounded-lg shadow-md dark:bg-white'>
         <h2 className="text-lg font-semibold mb-2">Theme Preferences</h2>
         <div className='flex justify-between'>
           <span>Dark Mode</span>
