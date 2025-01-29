@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AddButtonPage, Footer, Header, MainSection } from './components/index'
 import { AddButtonContextProvider, FilterContextProvider } from './context';
 
@@ -46,6 +46,9 @@ function App() {
 	}])
   }
 
+  useEffect(()=>{
+    localStorage.setItem("bookData", JSON.stringify(bookData));
+  },[bookData])
 
   return (
     <>

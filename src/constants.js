@@ -16,3 +16,4 @@ export const readingStatisticsData = [
         value: 1
     }
 ]
+

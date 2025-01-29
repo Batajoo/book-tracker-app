@@ -26,7 +26,7 @@ function BookCard({
                 <p className='text-gray-600 mb-1'>{authorName}</p>
                 <p className='text-gray-500'>{genre}</p>
                 <div className='text-gray-500 mb-1'>
-                    {status === "completed" ? 
+                    {status === "Completed" ? 
                         (
                         <div>
                             <FontAwesomeIcon icon={faCircleCheck} className="text-green-500 mr-2"/>
