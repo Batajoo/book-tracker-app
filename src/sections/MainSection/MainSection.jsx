@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { faExclamation, faBookOpenReader } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {AddBookSection, BookCard} from "../../components/index";
@@ -7,6 +7,17 @@ import { useAddButtonContext, useFilterContext } from "../../context";
 function MainSection(){
     const {bookData} = useAddButtonContext();
     const {filterStatus, filterValue, setFilterValue} = useFilterContext();
+
+    const [filteredBookData, changeFilteredBookData] = useState([...bookData]);
+
+    useEffect(()=>{
+        if(filterValue === "All Status"){
+            changeFilteredBookData(bookData);
+        } else {
+        changeFilteredBookData(bookData.filter((book)=>book.status === filterValue))
+    }
+    },[filterValue, bookData])
+
     return(
     <section className="max-w-4xl mx-auto block">
         <AddBookSection/>
@@ -27,7 +38,7 @@ function MainSection(){
             <span>Track your reading progress and manage your book collection.</span>
         </div>
         <div>
-            {bookData.map((el, index)=>(
+            {filteredBookData.map((el, index)=>(
                 <BookCard {...el}  key={index} 
             />
             ))}

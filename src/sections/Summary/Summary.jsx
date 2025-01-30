@@ -1,29 +1,26 @@
 import React from 'react'
 import { StatisticsCard } from '../../components'
+import { useAddButtonContext } from '../../context';
 
 function Summary() {
-  let bookDataCurrent = [];
-  if(localStorage.getItem("bookData")){
-    bookDataCurrent = JSON.parse(localStorage.getItem("bookData"));
-    console.log(bookDataCurrent);
-  }
+  const {bookData} = useAddButtonContext();
 
   const readingStatisticsData = [
     {
         name: "Total",
-        value: bookDataCurrent.length
+        value: bookData.length
     },
     {
         name: "Reading",
-        value: bookDataCurrent.reduce((total, bookVal)=>bookVal.status === "Currently Reading" ? ++total : total,0)
+        value: bookData.reduce((total, bookVal)=>bookVal.status === "Currently Reading" ? ++total : total,0)
     },
     {
         name: "Completed",
-        value: bookDataCurrent.reduce((total, bookVal)=>bookVal.status === "completed" ? ++total : total,0)
+        value: bookData.reduce((total, bookVal)=>bookVal.status === "Completed" ? ++total : total,0)
     },
     {
         name: "To Read",
-        value: bookDataCurrent.reduce((total, bookVal)=>bookVal.status === "To Read" ? ++total : total,0)
+        value: bookData.reduce((total, bookVal)=>bookVal.status === "To Read" ? ++total : total,0)
     }
 ]
 
