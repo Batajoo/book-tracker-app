@@ -34,15 +34,17 @@ function Layout() {
   }
 
   const addBook = (title, author, genre, status, rating, notes) => {
-	setBookData((prevData)=>[...prevData,{
-		bookName: title,
-		authorName: author,
-		status: status,
-		genre: genre,
-		starsNumbers: rating,
-		notes: notes,
-		dateCreated: Date.now()
-	}])
+    const now = new Date();
+
+    setBookData((prevData)=>[...prevData,{
+      bookName: title,
+      authorName: author,
+      status: status,
+      genre: genre,
+      starsNumbers: rating,
+      notes: notes,
+      dateCreated: now.toISOString().split("T")[0]
+    }])
   }
 
   useEffect(()=>{
