@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {AddBookSection, BookCard} from "../../components/index";
 import { useAddButtonContext, useFilterContext } from "../../context";
 
+// Main section 
 function MainSection(){
     const {bookData} = useAddButtonContext();
     const {filterStatus, filterValue, setFilterValue} = useFilterContext();
