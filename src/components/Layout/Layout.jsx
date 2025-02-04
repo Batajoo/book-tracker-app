@@ -6,7 +6,7 @@ import { AddButtonContextProvider, DarkModeContextProvider } from '../../context
 function Layout() {
   const [darkMode, setDarkMode] = useState(false);
   const [addPageOpen, setAddPageOpen] = useState(false);
-
+  // book data 
    const [bookData, setBookData] = useState([
     {
         bookName: "The Silent Ocean",
